@@ -1,11 +1,20 @@
-#def printPrimes():
-    n=int(input("Enter the last number"))
-    for p in range(2,n+1):
-	    for i in range(2,p):
-		    if p % i==0:
-			    break
-	    else:
-		    print (p)
-    print ("Done")	
-    #return	
-			
+def prime(n):
+	"""
+	This function will seek to find out if a list of numbers,
+	from 0 to n, has prime numbers.
+	"""
+    listx = list()
+    for num in range(2, n+1):
+        prime = True
+        for i in range(2, num):
+            if (num % i == 0):
+                prime = False
+        if prime:
+            listx.append(num)
+        else:
+        	return 'Not prime'
+    return listx
+
+
+print prime (10)
+# Function call.
